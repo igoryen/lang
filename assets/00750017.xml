@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactData
+	xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message"
+	xmlns:cansim="urn:sdmx:org.sdmx.infomodel.keyfamily.KeyFamily=STATCAN:keyF:1.0:compact"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd
+	urn:sdmx:org.sdmx.infomodel.keyfamily.KeyFamily=STATCAN:keyF:1.0:compact STATCAN_keyF_Compact.xsd">
+	<Header>
+		<ID>075-0017 [footnote reference:1]</ID>
+		<Test>false</Test>
+		<Name xml:lang="en">Historical statistics, mother tongues of the population *Terminated*</Name>
+		<Name xml:lang="fr">Statistiques historiques, langues maternelles de la population *Terminée*</Name>
+		<Prepared>2013-07-12T15:11:05-04:00</Prepared>
+		<Sender id="STATCAN">
+		</Sender>
+		<Receiver id="STATCAN">
+		</Receiver>
+		<ReportingBegin>1931-01-01T00:00:00-05:00</ReportingBegin>
+		<ReportingEnd>1971-01-01T00:00:00-05:00</ReportingEnd>
+	</Header>
+	<cansim:DataSet>
+		<cansim:Series UOM="1" GEO="1" MOT="1">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="10376786"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="11506655"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="14009429"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="18238247"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="21568310"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="2">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="5914402"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="6448190"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="8280809"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="10660534"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="12973810"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="3">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="2832298"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="3354753"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="4068850"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="5123151"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="5793650"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="4">
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="28110"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="42889"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="43385"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="5">
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="8784"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="13830"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="14520"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="6">
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="7019"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="14062"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="14140"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="7">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="5506"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="6910"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="12307"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="14997"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="14725"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="8">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="2661"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="9">
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="24360"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="10">
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="7533"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="13974"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="32708"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="21200"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="11">
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="3040"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="3160"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="12">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="69281"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="55859"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="45878"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="66955"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="111745"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="13">
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="33500"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="28289"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="49099"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="94855"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="14">
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="22359"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="17589"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="17856"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="16890"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="15">
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="74190"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="16">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="10521"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="14863"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="11031"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="28886"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="26085"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="17">
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="6415"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="18">
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="41690"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="19">
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="51423"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="45150"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="20">
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="8877"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="27780"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="21">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="25099"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="37604"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="45516"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="42546"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="17370"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="22">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="26532"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="53215"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="87935"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="170177"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="144925"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="23">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="39965"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="37331"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="31771"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="44785"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="36725"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="24">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="18048"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="14557"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="12623"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="14304"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="14240"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="25">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="362011"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="322228"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="329302"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="563713"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="561085"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="26">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="7346"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="8747"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="8036"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="40455"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="104455"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="27">
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="130929"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="144787"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="166531"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="179820"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="28">
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="164525"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="29">
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="15295"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="30">
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="1731"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="4505"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="32555"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="31">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="85520"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="80260"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="92244"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="339626"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="538360"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="32">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="37959"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="46287"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="42402"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="85939"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="86835"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="33">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="118599"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="128711"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="129238"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="161720"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="134780"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="34">
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="150"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="18213"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="86925"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="35">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="18115"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="16402"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="10105"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="10165"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="11300"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="36">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="50759"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="52431"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="39223"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="42903"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="31745"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="37">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="159854"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="143917"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="106848"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="116714"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="84335"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="38">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="21453"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="18776"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="15714"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="35035"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="27395"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="39">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="16034"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="15510"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="11207"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="8993"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="7860"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="40">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="64125"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="60084"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="43831"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="40054"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="27405"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="41">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="58242"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="49547"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="36096"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="32632"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="21680"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="42">
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="28550"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="43">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="1472"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="1030"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="1516"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="6720"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="23815"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="44">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="9226"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="8111"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="5475"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="12999"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="28550"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="45">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="252802"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="313273"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="352323"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="361496"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="309855"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="46">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="149520"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="129806"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="103593"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="82448"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="49890"/>
+		</cansim:Series>
+		<cansim:Series UOM="1" GEO="1" MOT="47">
+			<cansim:Obs TIME_PERIOD="1931" OBS_VALUE="179290"/>
+			<cansim:Obs TIME_PERIOD="1941" OBS_VALUE="61231"/>
+			<cansim:Obs TIME_PERIOD="1951" OBS_VALUE="29933"/>
+			<cansim:Obs TIME_PERIOD="1961" OBS_VALUE="17976"/>
+			<cansim:Obs TIME_PERIOD="1971" OBS_VALUE="41835"/>
+		</cansim:Series>
+	</cansim:DataSet>
+	</CompactData>

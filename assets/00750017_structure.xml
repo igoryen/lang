@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:Structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure http://www.sdmx.org/docs/2_0/SDMXStructure.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd">
+  <Header>
+    <ID>075-0017 [footnote reference:1]</ID>
+    <Test>true</Test>
+    <Name xml:lang="en">Historical statistics, mother tongues of the population *Terminated*</Name>
+    <Name xml:lang="fr">Statistiques historiques, langues maternelles de la population *Terminée*</Name>
+    <Prepared>2013-07-12T15:11:05-04:00</Prepared>
+    <Sender id="STATCAN" />
+    <Receiver id="STATCAN" />
+  </Header>
+  <CodeLists>
+    <structure:CodeList xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="CL_UOM" version="1.0" isFinal="false">
+      <structure:Name xml:lang="en">Unit of measure</structure:Name>
+      <structure:Name xml:lang="fr">Unité de mesure</structure:Name>
+      <structure:Code value="1">
+        <structure:Description xml:lang="en">Persons</structure:Description>
+        <structure:Description xml:lang="fr">Personnes</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="CL_GEO" version="1.0" isFinal="false">
+      <structure:Name xml:lang="en">Geography</structure:Name>
+      <structure:Name xml:lang="fr">Géographie</structure:Name>
+      <structure:Code value="1">
+        <structure:Description xml:lang="en">Canada</structure:Description>
+        <structure:Description xml:lang="fr">Canada</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="CL_MOT" version="1.0" isFinal="false">
+      <structure:Name xml:lang="en">Mother tongue</structure:Name>
+      <structure:Name xml:lang="fr">Langue maternelle</structure:Name>
+      <structure:Code value="1">
+        <structure:Description xml:lang="en">Total languages</structure:Description>
+        <structure:Description xml:lang="fr">Total des langues</structure:Description>
+      </structure:Code>
+      <structure:Code value="2">
+        <structure:Description xml:lang="en">English</structure:Description>
+        <structure:Description xml:lang="fr">Anglais</structure:Description>
+      </structure:Code>
+      <structure:Code value="3">
+        <structure:Description xml:lang="en">French</structure:Description>
+        <structure:Description xml:lang="fr">Français</structure:Description>
+      </structure:Code>
+      <structure:Code value="4">
+        <structure:Description xml:lang="en">Baltic languages</structure:Description>
+        <structure:Description xml:lang="fr">Langues baltiques</structure:Description>
+      </structure:Code>
+      <structure:Code value="5">
+        <structure:Description xml:lang="en">Estonian</structure:Description>
+        <structure:Description xml:lang="fr">Estonien</structure:Description>
+      </structure:Code>
+      <structure:Code value="6">
+        <structure:Description xml:lang="en">Lettish</structure:Description>
+        <structure:Description xml:lang="fr">Letton</structure:Description>
+      </structure:Code>
+      <structure:Code value="7">
+        <structure:Description xml:lang="en">Lithuanian</structure:Description>
+        <structure:Description xml:lang="fr">Lithuanien</structure:Description>
+      </structure:Code>
+      <structure:Code value="8">
+        <structure:Description xml:lang="en">Bulgarian</structure:Description>
+        <structure:Description xml:lang="fr">Bulgare</structure:Description>
+      </structure:Code>
+      <structure:Code value="9">
+        <structure:Description xml:lang="en">Celtic languages</structure:Description>
+        <structure:Description xml:lang="fr">Langues celtiques</structure:Description>
+      </structure:Code>
+      <structure:Code value="10">
+        <structure:Description xml:lang="en">Gaelic</structure:Description>
+        <structure:Description xml:lang="fr">Gaélique</structure:Description>
+      </structure:Code>
+      <structure:Code value="11">
+        <structure:Description xml:lang="en">Welsh</structure:Description>
+        <structure:Description xml:lang="fr">Gallois</structure:Description>
+      </structure:Code>
+      <structure:Code value="12">
+        <structure:Description xml:lang="en">Chinese and Japanese</structure:Description>
+        <structure:Description xml:lang="fr">Chinois et japonais</structure:Description>
+      </structure:Code>
+      <structure:Code value="13">
+        <structure:Description xml:lang="en">Chinese</structure:Description>
+        <structure:Description xml:lang="fr">Chinois</structure:Description>
+      </structure:Code>
+      <structure:Code value="14">
+        <structure:Description xml:lang="en">Japanese</structure:Description>
+        <structure:Description xml:lang="fr">Japonais</structure:Description>
+      </structure:Code>
+      <structure:Code value="15">
+        <structure:Description xml:lang="en">Croatian, Serbian, et cetera</structure:Description>
+        <structure:Description xml:lang="fr">Croate, serbe, et caetera</structure:Description>
+      </structure:Code>
+      <structure:Code value="16">
+        <structure:Description xml:lang="en">Croatian</structure:Description>
+        <structure:Description xml:lang="fr">Croate</structure:Description>
+      </structure:Code>
+      <structure:Code value="17">
+        <structure:Description xml:lang="en">Slovenian</structure:Description>
+        <structure:Description xml:lang="fr">Slovène</structure:Description>
+      </structure:Code>
+      <structure:Code value="18">
+        <structure:Description xml:lang="en">Yugoslav</structure:Description>
+        <structure:Description xml:lang="fr">Yougoslave</structure:Description>
+        <structure:Annotations>
+          <common:Annotation>
+            <common:AnnotationTitle>2</common:AnnotationTitle>
+            <common:AnnotationType>Footnotes for Member</common:AnnotationType>
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Code>
+      <structure:Code value="19">
+        <structure:Description xml:lang="en">Czech and Slovak</structure:Description>
+        <structure:Description xml:lang="fr">Tchèque et slovaque</structure:Description>
+      </structure:Code>
+      <structure:Code value="20">
+        <structure:Description xml:lang="en">Czech</structure:Description>
+        <structure:Description xml:lang="fr">Tchèque</structure:Description>
+      </structure:Code>
+      <structure:Code value="21">
+        <structure:Description xml:lang="en">Slovak</structure:Description>
+        <structure:Description xml:lang="fr">Slovaque</structure:Description>
+      </structure:Code>
+      <structure:Code value="22">
+        <structure:Description xml:lang="en">Dutch</structure:Description>
+        <structure:Description xml:lang="fr">Hollandais</structure:Description>
+      </structure:Code>
+      <structure:Code value="23">
+        <structure:Description xml:lang="en">Finnish</structure:Description>
+        <structure:Description xml:lang="fr">Finlandais</structure:Description>
+      </structure:Code>
+      <structure:Code value="24">
+        <structure:Description xml:lang="en">Flemish</structure:Description>
+        <structure:Description xml:lang="fr">Flamand</structure:Description>
+      </structure:Code>
+      <structure:Code value="25">
+        <structure:Description xml:lang="en">German</structure:Description>
+        <structure:Description xml:lang="fr">Allemand</structure:Description>
+      </structure:Code>
+      <structure:Code value="26">
+        <structure:Description xml:lang="en">Greek</structure:Description>
+        <structure:Description xml:lang="fr">Grec</structure:Description>
+      </structure:Code>
+      <structure:Code value="27">
+        <structure:Description xml:lang="en">Native Indian and Inuit</structure:Description>
+        <structure:Description xml:lang="fr">Langues Amérindiennes et Inuit</structure:Description>
+      </structure:Code>
+      <structure:Code value="28">
+        <structure:Description xml:lang="en">Native Indian</structure:Description>
+        <structure:Description xml:lang="fr">Amérindien</structure:Description>
+      </structure:Code>
+      <structure:Code value="29">
+        <structure:Description xml:lang="en">Inuit (Eskimo)</structure:Description>
+        <structure:Description xml:lang="fr">Inuit (Esquimau)</structure:Description>
+      </structure:Code>
+      <structure:Code value="30">
+        <structure:Description xml:lang="en">Indo-Pakistan</structure:Description>
+        <structure:Description xml:lang="fr">Indo-pakistanais</structure:Description>
+      </structure:Code>
+      <structure:Code value="31">
+        <structure:Description xml:lang="en">Italian</structure:Description>
+        <structure:Description xml:lang="fr">Italien</structure:Description>
+      </structure:Code>
+      <structure:Code value="32">
+        <structure:Description xml:lang="en">Maygar (Hungarian)</structure:Description>
+        <structure:Description xml:lang="fr">Maygar (hongrois)</structure:Description>
+      </structure:Code>
+      <structure:Code value="33">
+        <structure:Description xml:lang="en">Polish</structure:Description>
+        <structure:Description xml:lang="fr">Polonais</structure:Description>
+      </structure:Code>
+      <structure:Code value="34">
+        <structure:Description xml:lang="en">Portuguese</structure:Description>
+        <structure:Description xml:lang="fr">Portuguais</structure:Description>
+      </structure:Code>
+      <structure:Code value="35">
+        <structure:Description xml:lang="en">Romanian</structure:Description>
+        <structure:Description xml:lang="fr">Roumain</structure:Description>
+      </structure:Code>
+      <structure:Code value="36">
+        <structure:Description xml:lang="en">Russian</structure:Description>
+        <structure:Description xml:lang="fr">Russe</structure:Description>
+      </structure:Code>
+      <structure:Code value="37">
+        <structure:Description xml:lang="en">Scandinavian</structure:Description>
+        <structure:Description xml:lang="fr">Langues scandinaves</structure:Description>
+      </structure:Code>
+      <structure:Code value="38">
+        <structure:Description xml:lang="en">Danish</structure:Description>
+        <structure:Description xml:lang="fr">Danois</structure:Description>
+      </structure:Code>
+      <structure:Code value="39">
+        <structure:Description xml:lang="en">Icelandic</structure:Description>
+        <structure:Description xml:lang="fr">Islandais</structure:Description>
+      </structure:Code>
+      <structure:Code value="40">
+        <structure:Description xml:lang="en">Norwegian</structure:Description>
+        <structure:Description xml:lang="fr">Norvégien</structure:Description>
+      </structure:Code>
+      <structure:Code value="41">
+        <structure:Description xml:lang="en">Swedish</structure:Description>
+        <structure:Description xml:lang="fr">Suédois</structure:Description>
+      </structure:Code>
+      <structure:Code value="42">
+        <structure:Description xml:lang="en">Semitic languages</structure:Description>
+        <structure:Description xml:lang="fr">Langues sémitiques</structure:Description>
+      </structure:Code>
+      <structure:Code value="43">
+        <structure:Description xml:lang="en">Spanish</structure:Description>
+        <structure:Description xml:lang="fr">Espagnol</structure:Description>
+      </structure:Code>
+      <structure:Code value="44">
+        <structure:Description xml:lang="en">Syrian and Arabic</structure:Description>
+        <structure:Description xml:lang="fr">Syrien et arabe</structure:Description>
+      </structure:Code>
+      <structure:Code value="45">
+        <structure:Description xml:lang="en">Ukrainian</structure:Description>
+        <structure:Description xml:lang="fr">Ukranien</structure:Description>
+      </structure:Code>
+      <structure:Code value="46">
+        <structure:Description xml:lang="en">Yiddish</structure:Description>
+        <structure:Description xml:lang="fr">Yiddish</structure:Description>
+      </structure:Code>
+      <structure:Code value="47">
+        <structure:Description xml:lang="en">Other languages</structure:Description>
+        <structure:Description xml:lang="fr">Autres langues</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="CL_STC_UNIT" agencyID="STATCAN" version="1.0" isFinal="false" />
+    <structure:CodeList xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="CL_OBS_SYMBOL" agencyID="STATCAN" version="1.0" isFinal="false">
+      <structure:Code value="1">
+        <structure:Description xml:lang="en">p = Preliminary</structure:Description>
+        <structure:Description xml:lang="fr">p = Donnée provisoire</structure:Description>
+      </structure:Code>
+      <structure:Code value="3">
+        <structure:Description xml:lang="en">r = Revised</structure:Description>
+        <structure:Description xml:lang="fr">r = Donnée rectifiée</structure:Description>
+      </structure:Code>
+      <structure:Code value="4">
+        <structure:Description xml:lang="en">... = Not applicable</structure:Description>
+        <structure:Description xml:lang="fr">... = N''ayant pas lieu de figurer</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="CL_OBS_STATUS" agencyID="STATCAN" version="1.0" isFinal="false">
+      <structure:Code value="1">
+        <structure:Description xml:lang="en">.. = Not available for a specific reference period</structure:Description>
+        <structure:Description xml:lang="fr">.. = Indisponible pour une période de référence précise</structure:Description>
+      </structure:Code>
+      <structure:Code value="2">
+        <structure:Description xml:lang="en">0 = Data rounded to 0</structure:Description>
+        <structure:Description xml:lang="fr">0 = Valeur arrondie à 0</structure:Description>
+      </structure:Code>
+      <structure:Code value="3">
+        <structure:Description xml:lang="en">A = Excellent</structure:Description>
+        <structure:Description xml:lang="fr">A = Excellent</structure:Description>
+      </structure:Code>
+      <structure:Code value="4">
+        <structure:Description xml:lang="en">B = Very good</structure:Description>
+        <structure:Description xml:lang="fr">B = Très bon</structure:Description>
+      </structure:Code>
+      <structure:Code value="5">
+        <structure:Description xml:lang="en">C = Good</structure:Description>
+        <structure:Description xml:lang="fr">C = Bon</structure:Description>
+      </structure:Code>
+      <structure:Code value="6">
+        <structure:Description xml:lang="en">D = Acceptable</structure:Description>
+        <structure:Description xml:lang="fr">D = Passable</structure:Description>
+      </structure:Code>
+      <structure:Code value="7">
+        <structure:Description xml:lang="en">E = Poor,Use with caution</structure:Description>
+        <structure:Description xml:lang="fr">E = Médiocre,Utiliser avec prudence</structure:Description>
+      </structure:Code>
+      <structure:Code value="8">
+        <structure:Description xml:lang="en">F = Too unreliable to be published</structure:Description>
+        <structure:Description xml:lang="fr">F = Trop peu fiable pour être publiée</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="CL_OBS_CONF" agencyID="STATCAN" version="1.0" isFinal="false">
+      <structure:Code value="1">
+        <structure:Description xml:lang="en">x = Suppressed to meet the confidentiality requirements of the Statistics Act</structure:Description>
+        <structure:Description xml:lang="fr">x = Confidentiel en vertu des dispositions de la Loi sur la statistique</structure:Description>
+      </structure:Code>
+      <structure:Code value="2">
+        <structure:Description xml:lang="en">x = Suppressed to meet the confidentiality requirements of the Statistics Act</structure:Description>
+        <structure:Description xml:lang="fr">x = Confidentiel en vertu des dispositions de la Loi sur la statistique</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+  </CodeLists>
+  <Concepts>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="UOM">
+      <structure:Name xml:lang="en">Unit of measure</structure:Name>
+      <structure:Name xml:lang="fr">Unité de mesure</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="GEO">
+      <structure:Name xml:lang="en">Geography</structure:Name>
+      <structure:Name xml:lang="fr">Géographie</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="MOT">
+      <structure:Name xml:lang="en">Mother tongue</structure:Name>
+      <structure:Name xml:lang="fr">Langue maternelle</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="TIME_PERIOD">
+      <structure:Name xml:lang="en">Time</structure:Name>
+      <structure:Name xml:lang="fr">Temps</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="OBS_VALUE">
+      <structure:Name xml:lang="en">Observation Value</structure:Name>
+      <structure:Name xml:lang="fr">Valeur d'observation</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="OBS_SYMBOL">
+      <structure:Name xml:lang="en">Observation Symbol</structure:Name>
+      <structure:Name xml:lang="fr">Symbol d'observation</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="OBS_STATUS">
+      <structure:Name xml:lang="en">Observation Status</structure:Name>
+      <structure:Name xml:lang="fr">Observation Status</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="OBS_CONF">
+      <structure:Name xml:lang="en">Observation Confidentiality</structure:Name>
+      <structure:Name xml:lang="fr">Confidentiel d'observation</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="STC_UNIT">
+      <structure:Name xml:lang="en">Unit</structure:Name>
+      <structure:Name xml:lang="fr">Unité</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="UNIT_MULT">
+      <structure:Name xml:lang="en">Unit multplier</structure:Name>
+      <structure:Name xml:lang="fr">Unité multiplicateur</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="FOOTNOTE_REF">
+      <structure:Name xml:lang="en">Footnote reference for observation</structure:Name>
+      <structure:Name xml:lang="fr">référence de la note de renvoie d’observation</structure:Name>
+    </structure:Concept>
+    <structure:Concept xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" id="TERMINATED">
+      <structure:Name xml:lang="en">Terminated</structure:Name>
+      <structure:Name xml:lang="fr">terminé</structure:Name>
+    </structure:Concept>
+  </Concepts>
+  <KeyFamilies>
+    <structure:KeyFamily xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" version="1.0" isFinal="false">
+      <structure:Components>
+        <structure:Dimension conceptRef="UOM" codelist="CL_UOM" />
+        <structure:Dimension conceptRef="GEO" codelist="CL_GEO" />
+        <structure:Dimension conceptRef="MOT" codelist="CL_MOT" />
+        <structure:TimeDimension conceptRef="TIME_PERIOD" />
+        <structure:PrimaryMeasure conceptRef="OBS_VALUE" />
+        <structure:Attribute conceptRef="OBS_SYMBOL" codelist="CL_OBS_SYMBOL" attachmentLevel="Observation" assignmentStatus="Conditional" />
+        <structure:Attribute conceptRef="OBS_STATUS" codelist="CL_OBS_STATUS" attachmentLevel="Observation" assignmentStatus="Conditional" />
+        <structure:Attribute conceptRef="OBS_CONF" codelist="CL_OBS_CONF" attachmentLevel="Observation" assignmentStatus="Conditional" />
+        <structure:Attribute conceptRef="FOOTNOTE_REF" attachmentLevel="Observation" assignmentStatus="Conditional" />
+        <structure:Attribute conceptRef="TERMINATED" attachmentLevel="Observation" assignmentStatus="Conditional" />
+        <structure:Attribute conceptRef="STC_UNIT" codelist="CL_STC_UNIT" attachmentLevel="Series" assignmentStatus="Conditional" />
+        <structure:Attribute conceptRef="UNIT_MULT" codelist="CL_UNIT_MULT" attachmentLevel="Series" assignmentStatus="Conditional" />
+        <structure:Attribute conceptRef="DECIMALS" attachmentLevel="Series" assignmentStatus="Conditional" />
+      </structure:Components>
+      <structure:Annotations>
+        <common:Annotation>
+          <common:AnnotationTitle>1</common:AnnotationTitle>
+          <common:AnnotationType>Footnotes</common:AnnotationType>
+          <common:AnnotationText xml:lang="en">Includes Newfoundland and Labrador beginning in 1951.</common:AnnotationText>
+          <common:AnnotationText xml:lang="fr">Terre-Neuve-et-Labrador est prise en compte à partir de 1951.</common:AnnotationText>
+        </common:Annotation>
+        <common:Annotation>
+          <common:AnnotationTitle>2</common:AnnotationTitle>
+          <common:AnnotationType>Footnotes</common:AnnotationType>
+          <common:AnnotationText xml:lang="en">Yugoslav includes a number of other Yugoslav languages.</common:AnnotationText>
+          <common:AnnotationText xml:lang="fr">Yougoslaves comprend un certain nombre d'autres langues Yougoslaves.</common:AnnotationText>
+        </common:Annotation>
+      </structure:Annotations>
+    </structure:KeyFamily>
+  </KeyFamilies>
+</Structure>
+
