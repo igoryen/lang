@@ -40,6 +40,7 @@ public class MainActivity extends Activity {
 
 		setContentView(R.layout.activity_main);
     	getHeader();
+    	getUnitOfMeasure();
 
 	}
 
@@ -84,18 +85,76 @@ public class MainActivity extends Activity {
 	        
         	Log.d("a2.main.getHeader.nameElements.getLength",  ""+tagNameNodeSet.getLength());
 
-        	String strNameEn = "";
             Node itemNodeEn = tagNameNodeSet.item(0); // 19
-            strNameEn = itemNodeEn.getTextContent() + ". \n"; // 20
-            Log.d("a2.main.getHeader.strNameEn", strNameEn);
+            strHeader = itemNodeEn.getTextContent() + ". \n"; // 20
+            Log.d("a2.main.getHeader.strHeader", strHeader);
 
 	    } catch (IOException e1) {
 	        Log.d("a2", e1.getLocalizedMessage());
 	    }
 
 	    return strHeader; // 13
+	} // getHeader
+	
+	
+	private String getUnitOfMeasure() { // 1
+	    InputStream is = null;
+	    String UnitOfMeasure = "";
+	    
+    	Log.d("a2.main.getUnitOfMeasure", "entered");
+
+	    try {
+	        is = getAssets().open("00750017_structure.xml"); //2
+	        Document doc = null; // 15
+	        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); // 16
+	        DocumentBuilder db; // 17
+	        try {
+	            db = dbf.newDocumentBuilder(); // 3
+	            doc = db.parse(is); // 4
+	        } catch (ParserConfigurationException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        } catch (Exception e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
+	        doc.getDocumentElement().normalize(); // 18
+	        NodeList a = doc.getElementsByTagName("CodeLists"); // 5
+	        
+        	Log.d("a2.main.getUnitOfMeasure.NodeListOfCodeList.getLength",  ""+a.getLength());
+            
+        	Node b = a.item(0); // 19
+        	
+        	Element c = (Element) b; // 8
+        	
+        	NodeList d = (c).getElementsByTagName("structure:CodeList");
+            Node e = d.item(0);
+            
+            Element f = (Element) e;
+            NodeList g = (f).getElementsByTagName("structure:Name");
+            
+            Node h = g.item(0);
+            Element i = (Element) h;
+            String j = i.getTextContent() + ". \n"; // 20
+            Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure.header", j);
+            
+            NodeList n = (f).getElementsByTagName("structure:Description");
+
+            Node k = n.item(0);
+            Element l = (Element) k;
+            String m = l.getTextContent() + ". \n";
+            Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure.value", m);
+
+            UnitOfMeasure = m;
+            Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure", UnitOfMeasure);
+
+
+	    } catch (IOException e1) {
+	        Log.d("a2", e1.getLocalizedMessage());
+	    }
+
+	    return UnitOfMeasure; // 13
 	} // getStats
-	// 900
 
     private void DisplayToast(String msg){ // 14
     	Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
