@@ -42,26 +42,8 @@ public class MainActivity extends Activity {
 
 	// 800
 
-
-
-
-	// ====================================================================
-	// Create a subclass of AsyncTask to:
-	// 10. call the WordDefinition() a-synchronously
-	// ====================================================================
-	private class AccessWebServiceTask extends AsyncTask<String, Void, String> {
-		protected String doInBackground(String... urls) {
-			return WordDefinition(urls[0]); // 10
-		}
-
-		protected void onPostExecute(String result) {
-			Toast.makeText(getBaseContext(), result, Toast.LENGTH_LONG).show();
-		}
-	}
-
-
-
-
+	// 900
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
