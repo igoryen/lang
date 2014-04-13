@@ -89,15 +89,17 @@ public class MainActivity extends Activity {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
 	        }
-	        doc.getDocumentElement().normalize(); // 18	  
+	        doc1.getDocumentElement().normalize(); // 18
+	        doc2.getDocumentElement().normalize(); // 18	  
+	        
 	    	Log.d("a2.main.getStats", "---------------------------");
-	        getStatsHeader(doc);
+	        getStatsHeader(doc1, doc2);
 	    	Log.d("a2.main.getStats", "---------------------------");
-	        getStatsUnitOfMeasure(doc);
+	        getStatsUnitOfMeasure(doc1, doc2);
 	    	Log.d("a2.main.getStats", "---------------------------");
-	        getStatsGeography(doc);
+	        getStatsGeography(doc1, doc2);
 	    	Log.d("a2.main.getStats", "---------------------------");	    	
-	        getStatsLangs(doc);
+	        getStatsLangs(doc1, doc2);
 	    	Log.d("a2.main.getStats", "---------------------------");
 	    	
 	        
@@ -108,9 +110,9 @@ public class MainActivity extends Activity {
 		return x;
 	}
 	
-	private String getStatsHeader(Document doc) { // 1
+	private String getStatsHeader(Document doc1, Document doc2) { // 1
 		String strHeader = "";
-	    NodeList tagNameNodeSet = doc.getElementsByTagName("Name"); // 5	        
+	    NodeList tagNameNodeSet = doc1.getElementsByTagName("Name"); // 5	        
         Log.d("a2.main.getHeader.nameElements.getLength",  ""+tagNameNodeSet.getLength());
         Node itemNodeEn = tagNameNodeSet.item(0); // 19
         strHeader = itemNodeEn.getTextContent() + ". \n"; // 20
@@ -119,7 +121,7 @@ public class MainActivity extends Activity {
 	} // getHeader
 	
 	
-	private String getStatsUnitOfMeasure(Document doc) { // 1
+	private String getStatsUnitOfMeasure(Document doc, Document doc2) { // 1
 	    String UnitOfMeasure = "";	    
     	Log.d("a2.main.getUnitOfMeasure", "entered");	    
         NodeList a = doc.getElementsByTagName("CodeLists"); // 5        
@@ -145,7 +147,7 @@ public class MainActivity extends Activity {
 	} // getStats
 
 	
-	private String getStatsGeography(Document doc) { // 1	   
+	private String getStatsGeography(Document doc, Document doc2) { // 1	   
 	    String geography = "";	    
     	Log.d("a2.main.getGeography", "entered");	    
         NodeList a = doc.getElementsByTagName("CodeLists"); // 5        
@@ -172,7 +174,7 @@ public class MainActivity extends Activity {
 	// 900
 	
 	
-	private ArrayList<String> getStatsLangs(Document doc) { // 1	   
+	private ArrayList<String> getStatsLangs(Document doc, Document doc2) { // 1	   
 	    ArrayList<String> langArrayList = new ArrayList<String>();	    
     	Log.d("a2.main.getStatsLangs", "entered");
     	
@@ -192,23 +194,31 @@ public class MainActivity extends Activity {
         String j = i.getTextContent() + ". \n"; // 20
         Log.d("a2.main.getStatsLangs.Langs.header", j);
         
-        NodeList n = (f).getElementsByTagName("structure:Code");
-        Log.d("a2.main.getStatsLangs.codes: ", ""+n.getLength()); // returns 47
+        NodeList n = (f).getElementsByTagName("structure:Code"); // list of 47 elements
+        Log.d("a2.main.getStatsLangs.codes: ", ""+n.getLength());
         
-        for (int x = 0; x < n.getLength(); x++){
-        	Node k = n.item(x);
+        for (int x = 0; x < n.getLength(); x++){ // 47 items of <structure:Code>
+        	Node k = n.item(x); // n-th item of <structure:Code>
             Element l = (Element) k;
-            NodeList o = (l).getElementsByTagName("structure:Description");
             
-            Node p = o.item(0);
-            Element q = (Element) p;
-            String r = q.getTextContent();
-            langArrayList.add(r);
-            Log.d("a2.main.getStatsLangs.Lang.value", x+". " +r);
-            //lang = m;
-            //Log.d("a2.main.getStatsLangs.lang", lang);
-        }
+            NodeList o = (l).getElementsByTagName("structure:Description");
+            //Log.d("a2.main.getStatsLangs.descriptions: ", ""+o.getLength()); // returns 2
+
+            for (int ii = 0; ii < o.getLength(); ii ++){ // 2 times
+            	Node p = o.item(ii);
+            	Element q = (Element) p;
+                //Log.d("a2.main.getStatsLangs.descriptions.xml:lang: ", ""+q.getAttribute("xml:lang"));
+
+            	
+            	if(q.getAttribute("xml:lang").contains("en")){
+            		String r = q.getTextContent();
+                    langArrayList.add(r);
+                    Log.d("a2.main.getStatsLangs.Lang.value", x+". " +r);
+            	} // if
+            }// for
+        } // for
         
+        Log.d("a2.main.getStatsLangs.langArrayList.size", ""+langArrayList.size());
 
 	    return langArrayList; // 13
 	} // getStats
