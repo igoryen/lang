@@ -4,5 +4,7 @@
     <string name="app_name">lang</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="app_description">This app will show you the historical statistics of languages in Canada. 
+        Press the Show button to see a graph.</string>
 
 </resources>
