@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -39,8 +40,9 @@ public class MainActivity extends Activity {
     	Log.d("a2.main.onCreate", "entered");
 
 		setContentView(R.layout.activity_main);
-    	getHeader();
-    	getUnitOfMeasure();
+		
+		getStats();
+    	
 
 	}
 
@@ -56,23 +58,30 @@ public class MainActivity extends Activity {
 	// 400
 	// 500
 	// 600
-	// 700
-	
+	// 700	
 	// 800
-	private String getHeader() { // 1
-	    InputStream is = null;
-	    String strHeader = "";
+	
+	private String getStats(){
+		String x = "";
+		InputStream is1 = null;
+		InputStream is2 = null;
 	    
-    	Log.d("a2.main.getHeader", "entered");
+    	Log.d("a2.main.getStats", "entered");
+    	
+    	try {
+	        is1 = getAssets().open("00750017_structure.xml"); //2
+	        is2 = getAssets().open("00750017.xml"); //2
 
-	    try {
-	        is = getAssets().open("00750017_structure.xml"); //2
-	        Document doc = null; // 15
+	        Document doc1 = null; // 15
+	        Document doc2 = null; // 15
+	        
 	        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); // 16
 	        DocumentBuilder db; // 17
+	        
 	        try {
 	            db = dbf.newDocumentBuilder(); // 3
-	            doc = db.parse(is); // 4
+	            doc1 = db.parse(is1); // 4
+	            doc2 = db.parse(is2); // 4
 	        } catch (ParserConfigurationException e) {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
@@ -80,82 +89,132 @@ public class MainActivity extends Activity {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
 	        }
-	        doc.getDocumentElement().normalize(); // 18
-	        NodeList tagNameNodeSet = doc.getElementsByTagName("Name"); // 5
+	        doc.getDocumentElement().normalize(); // 18	  
+	    	Log.d("a2.main.getStats", "---------------------------");
+	        getStatsHeader(doc);
+	    	Log.d("a2.main.getStats", "---------------------------");
+	        getStatsUnitOfMeasure(doc);
+	    	Log.d("a2.main.getStats", "---------------------------");
+	        getStatsGeography(doc);
+	    	Log.d("a2.main.getStats", "---------------------------");	    	
+	        getStatsLangs(doc);
+	    	Log.d("a2.main.getStats", "---------------------------");
+	    	
 	        
-        	Log.d("a2.main.getHeader.nameElements.getLength",  ""+tagNameNodeSet.getLength());
-
-            Node itemNodeEn = tagNameNodeSet.item(0); // 19
-            strHeader = itemNodeEn.getTextContent() + ". \n"; // 20
-            Log.d("a2.main.getHeader.strHeader", strHeader);
-
 	    } catch (IOException e1) {
 	        Log.d("a2", e1.getLocalizedMessage());
-	    }
-
+	    }		
+		
+		return x;
+	}
+	
+	private String getStatsHeader(Document doc) { // 1
+		String strHeader = "";
+	    NodeList tagNameNodeSet = doc.getElementsByTagName("Name"); // 5	        
+        Log.d("a2.main.getHeader.nameElements.getLength",  ""+tagNameNodeSet.getLength());
+        Node itemNodeEn = tagNameNodeSet.item(0); // 19
+        strHeader = itemNodeEn.getTextContent() + ". \n"; // 20
+        Log.d("a2.main.getHeader.strHeader", strHeader);
 	    return strHeader; // 13
 	} // getHeader
 	
 	
-	private String getUnitOfMeasure() { // 1
-	    InputStream is = null;
-	    String UnitOfMeasure = "";
-	    
-    	Log.d("a2.main.getUnitOfMeasure", "entered");
-
-	    try {
-	        is = getAssets().open("00750017_structure.xml"); //2
-	        Document doc = null; // 15
-	        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); // 16
-	        DocumentBuilder db; // 17
-	        try {
-	            db = dbf.newDocumentBuilder(); // 3
-	            doc = db.parse(is); // 4
-	        } catch (ParserConfigurationException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        } catch (Exception e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        }
-	        doc.getDocumentElement().normalize(); // 18
-	        NodeList a = doc.getElementsByTagName("CodeLists"); // 5
-	        
-        	Log.d("a2.main.getUnitOfMeasure.NodeListOfCodeList.getLength",  ""+a.getLength());
-            
-        	Node b = a.item(0); // 19
-        	
-        	Element c = (Element) b; // 8
-        	
-        	NodeList d = (c).getElementsByTagName("structure:CodeList");
-            Node e = d.item(0);
-            
-            Element f = (Element) e;
-            NodeList g = (f).getElementsByTagName("structure:Name");
-            
-            Node h = g.item(0);
-            Element i = (Element) h;
-            String j = i.getTextContent() + ". \n"; // 20
-            Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure.header", j);
-            
-            NodeList n = (f).getElementsByTagName("structure:Description");
-
-            Node k = n.item(0);
-            Element l = (Element) k;
-            String m = l.getTextContent() + ". \n";
-            Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure.value", m);
-
-            UnitOfMeasure = m;
-            Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure", UnitOfMeasure);
-
-
-	    } catch (IOException e1) {
-	        Log.d("a2", e1.getLocalizedMessage());
-	    }
-
+	private String getStatsUnitOfMeasure(Document doc) { // 1
+	    String UnitOfMeasure = "";	    
+    	Log.d("a2.main.getUnitOfMeasure", "entered");	    
+        NodeList a = doc.getElementsByTagName("CodeLists"); // 5        
+    	Log.d("a2.main.getUnitOfMeasure.NodeListOfCodeList.getLength",  ""+a.getLength());        
+    	Node b = a.item(0); // 19    	
+    	Element c = (Element) b; // 8    	
+    	NodeList d = (c).getElementsByTagName("structure:CodeList");
+        Node e = d.item(0); // <====
+        Element f = (Element) e;
+        NodeList g = (f).getElementsByTagName("structure:Name");        
+        Node h = g.item(0);
+        Element i = (Element) h;
+        String j = i.getTextContent() + ". \n"; // 20
+        Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure.header", j);        
+        NodeList n = (f).getElementsByTagName("structure:Description");
+        Node k = n.item(0);
+        Element l = (Element) k;
+        String m = l.getTextContent() + ". \n";
+        Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure.value", m);
+        UnitOfMeasure = m;
+        Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure", UnitOfMeasure);
 	    return UnitOfMeasure; // 13
 	} // getStats
 
+	
+	private String getStatsGeography(Document doc) { // 1	   
+	    String geography = "";	    
+    	Log.d("a2.main.getGeography", "entered");	    
+        NodeList a = doc.getElementsByTagName("CodeLists"); // 5        
+    	Log.d("a2.main.getGeography.NodeListOfCodeList.getLength",  ""+a.getLength());        
+    	Node b = a.item(0); // 19    	
+    	Element c = (Element) b; // 8    	
+    	NodeList d = (c).getElementsByTagName("structure:CodeList");
+        Node e = d.item(1); // <====
+        Element f = (Element) e;
+        NodeList g = (f).getElementsByTagName("structure:Name");        
+        Node h = g.item(0);
+        Element i = (Element) h;
+        String j = i.getTextContent() + ". \n"; // 20
+        Log.d("a2.main.getGeography.Geography.header", j);        
+        NodeList n = (f).getElementsByTagName("structure:Description");
+        Node k = n.item(0);
+        Element l = (Element) k;
+        String m = l.getTextContent() + ". \n";
+        Log.d("a2.main.getGeography.Geography.value", m);
+        geography = m;
+        Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure", geography);
+	    return geography; // 13
+	} // getStats
+	// 900
+	
+	
+	private ArrayList<String> getStatsLangs(Document doc) { // 1	   
+	    ArrayList<String> langArrayList = new ArrayList<String>();	    
+    	Log.d("a2.main.getStatsLangs", "entered");
+    	
+        NodeList a = doc.getElementsByTagName("CodeLists"); // 5        
+    	Log.d("a2.main.getStatsLangs.NodeListOfCodeList.getLength",  ""+a.getLength());
+    	
+    	Node b = a.item(0); // 19    	
+    	Element c = (Element) b; // 8    	
+    	NodeList d = (c).getElementsByTagName("structure:CodeList");
+    	
+        Node e = d.item(2); // <==== Third, for languages
+        Element f = (Element) e;
+        NodeList g = (f).getElementsByTagName("structure:Name");
+        
+        Node h = g.item(0);
+        Element i = (Element) h;
+        String j = i.getTextContent() + ". \n"; // 20
+        Log.d("a2.main.getStatsLangs.Langs.header", j);
+        
+        NodeList n = (f).getElementsByTagName("structure:Code");
+        Log.d("a2.main.getStatsLangs.codes: ", ""+n.getLength()); // returns 47
+        
+        for (int x = 0; x < n.getLength(); x++){
+        	Node k = n.item(x);
+            Element l = (Element) k;
+            NodeList o = (l).getElementsByTagName("structure:Description");
+            
+            Node p = o.item(0);
+            Element q = (Element) p;
+            String r = q.getTextContent();
+            langArrayList.add(r);
+            Log.d("a2.main.getStatsLangs.Lang.value", x+". " +r);
+            //lang = m;
+            //Log.d("a2.main.getStatsLangs.lang", lang);
+        }
+        
+
+	    return langArrayList; // 13
+	} // getStats
+	// 900
+	
+	
     private void DisplayToast(String msg){ // 14
     	Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     	//Log.d("a2", "M: Toast fired");
