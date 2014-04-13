@@ -173,9 +173,22 @@ public class MainActivity extends Activity {
 	} // getStats
 	// 900
 	
+	class YearValue{
+		String year;
+		String numbers;
+	}
+
+	class LangStat{
+	    String langName;
+	    ArrayList<YearValue> YearValueSet = new ArrayList<YearValue>();
+	}
 	
-	private ArrayList<String> getStatsLangs(Document doc, Document doc2) { // 1	   
-	    ArrayList<String> langArrayList = new ArrayList<String>();	    
+	private ArrayList<LangStat> getStatsLangs(Document doc, Document doc2) { // 1
+		LangStat  ls = new LangStat();
+		ArrayList<LangStat> lss = new ArrayList<LangStat>();
+
+		
+	    //ArrayList<String> langArrayStatList = new ArrayList<String>();
     	Log.d("a2.main.getStatsLangs", "entered");
     	
         NodeList a = doc.getElementsByTagName("CodeLists"); // 5        
@@ -194,33 +207,69 @@ public class MainActivity extends Activity {
         String j = i.getTextContent() + ". \n"; // 20
         Log.d("a2.main.getStatsLangs.Langs.header", j);
         
-        NodeList n = (f).getElementsByTagName("structure:Code"); // list of 47 elements
+        NodeList n = (f).getElementsByTagName("structure:Code"); // 47 languages
         Log.d("a2.main.getStatsLangs.codes: ", ""+n.getLength());
         
-        for (int x = 0; x < n.getLength(); x++){ // 47 items of <structure:Code>
-        	Node k = n.item(x); // n-th item of <structure:Code>
+        NodeList n2 = doc2.getElementsByTagName("cansim:Series"); // 47 stats for the 47 languages
+    	Log.d("a2.main.getStatsLangs.cansim:Series.getLength",  ""+n2.getLength());
+        
+        for (int x = 0; x < n.getLength(); x++){ 
+        	Node k = n.item(x); // for language x
             Element l = (Element) k;
             
+        	Node k2 = n2.item(x); // stats x for language x
+            Element l2 = (Element) k2;
+            
             NodeList o = (l).getElementsByTagName("structure:Description");
-            //Log.d("a2.main.getStatsLangs.descriptions: ", ""+o.getLength()); // returns 2
+            Log.d("a2.main.getStatsLangs.descriptions: ", ""+o.getLength()); // 2 names of lang x
 
-            for (int ii = 0; ii < o.getLength(); ii ++){ // 2 times
+            NodeList o2 = (l2).getElementsByTagName("cansim:Obs");
+            Log.d("a2.main.getStatsLangs.cansim:Obs.getLength(): ", ""+o2.getLength()); // 1-5 stats for language x
+            
+            for (int ii = 0; ii < o.getLength(); ii ++){ // 2 times - Eng and French name of language ii
             	Node p = o.item(ii);
             	Element q = (Element) p;
+            	
                 //Log.d("a2.main.getStatsLangs.descriptions.xml:lang: ", ""+q.getAttribute("xml:lang"));
 
+            	ls = new LangStat();
             	
-            	if(q.getAttribute("xml:lang").contains("en")){
-            		String r = q.getTextContent();
-                    langArrayList.add(r);
-                    Log.d("a2.main.getStatsLangs.Lang.value", x+". " +r);
+            	if(q.getAttribute("xml:lang").contains("en")){ // take english name of lang x           		
+
+                    //langArrayStatList.add(lang); // array [0] = language name
+            		ls.langName = q.getTextContent();
+            		Log.d("a2.langStatSet.langName", ls.langName);
+                    
+            		//Log.d("a2", "--------"+o2.getLength());
+                    for(int iii = 0; iii < o2.getLength(); iii ++){
+            			Node p2 = o2.item(iii);
+            			Element q2 = (Element) p2;
+            			
+            			YearValue yv = new YearValue();
+            			yv.year = (q2.getAttribute("TIME_PERIOD"));
+            			yv.numbers = (q2.getAttribute("OBS_VALUE"));
+            			//Log.d("a2.langStatSet.year_numbers", yv.year+" - " +yv.numbers);
+            			ls.YearValueSet.add(yv);
+            			yv = null;
+            		}
+        			lss.add(ls);
+                    //Log.d("a2.main.getStatsLangs.Lang.value", x+". " +lang);
             	} // if
             }// for
         } // for
         
-        Log.d("a2.main.getStatsLangs.langArrayList.size", ""+langArrayList.size());
+        Log.d("a2.main.getStatsLangs.lss.size", ""+lss.size());
+        //Log.d("a2", lss.get(0).langName);
+        
+        for(int y = 0; y < lss.size(); y++){
+        	Log.d("a2/a2.main.getStatsLangs.lss.ls(y)size", y+")"+lss.get(y).langName);
+        	for(int yy = 0; yy < lss.get(y).YearValueSet.size(); yy++){
+            	Log.d("a2/a2.main.getStatsLangs.lss.get(y).YearValueSet", y+")"+lss.get(y).YearValueSet.get(yy).year + " - " + lss.get(y).YearValueSet.get(yy).numbers);
+        	}        	
+        }
+        
 
-	    return langArrayList; // 13
+	    return lss; // 13
 	} // getStats
 	// 900
 	
