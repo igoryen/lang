@@ -6,5 +6,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="app_description">This app will show you the historical statistics of languages in Canada. 
         Press the Show button to see a graph.</string>
+  <string name="add_values">Add values to the chart</string>    
+  <string name="x">X</string>    
+  <string name="y">Y</string>
+  <string name="add">Add</string>
+  <string name="new_series">New series</string>
 
 </resources>
