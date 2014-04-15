@@ -28,7 +28,10 @@ public final class R {
         public static final int title_font_size=0x7f040003;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int canada=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int mothertongue=0x7f020002;
+        public static final int mothertonguelt=0x7f020003;
     }
     public static final class id {
         public static final int GEO=0x7f080008;
