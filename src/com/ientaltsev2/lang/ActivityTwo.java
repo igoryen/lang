@@ -89,8 +89,8 @@ public class ActivityTwo extends Activity  {
             //Log.d("a2.act2.getHeader.strHeader", strHeader);
             
             // TODO set strHeader to View
-            TextView header = (TextView) findViewById(R.id.header);
-            header.setText(strHeader);
+            //TextView header = (TextView) findViewById(R.id.header);
+            //header.setText(strHeader);
             
     	    //return strHeader; // 13
     	    
@@ -128,8 +128,8 @@ public class ActivityTwo extends Activity  {
             //Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure.value", strUOMdesc);
             
             // TODO set the unit of measure
-            TextView uom = (TextView) findViewById(R.id.UOM);
-            uom.setText(strUOMdesc);
+            //TextView uom = (TextView) findViewById(R.id.UOM);
+            //uom.setText(strUOMdesc);
             
             //Log.d("a2.main.getUnitOfMeasure.UnitOfMeasure", UnitOfMeasure);
             
@@ -154,8 +154,8 @@ public class ActivityTwo extends Activity  {
             String stringGEOdesc = elementGEOdesc.getTextContent() + ". \n";
             //Log.d("a2.main.getGeography.Geography.value", stringGEOdesc);
             // TODO set text view for geography
-            TextView geo = (TextView) findViewById(R.id.GEO);
-            geo.setText(stringGEOdesc);
+            //TextView geo = (TextView) findViewById(R.id.GEO);
+            //geo.setText(stringGEOdesc);
  
     	    //=================================================================
             // get language and statistics
@@ -254,8 +254,8 @@ public class ActivityTwo extends Activity  {
                     		Log.d("a2.act2", "match: " + al + " = " + ul);
                     		
                     		// TODO
-                    		TextView mot = (TextView) findViewById(R.id.MOT); // mot = mother tongue
-                            mot.setText(ul); // 
+                    		//TextView mot = (TextView) findViewById(R.id.MOT); // mot = mother tongue
+                            //mot.setText(ul); // 
             			    Log.d("a2.act2", "ul: " + ul);
 
                             
@@ -361,6 +361,7 @@ public class ActivityTwo extends Activity  {
                                     // TODO
                                     TextView stats = (TextView) findViewById(R.id.STAT); // mot = mother tongue
                                     stats.setText("");
+                                    //stats.setBackgroundResource(R.drawable.postit);
                                     for (int j = 0; j < langStats.size(); j++){
                                         stats.append(langStats.get(j) + "\n");
                                     }
